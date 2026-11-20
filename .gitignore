@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# 本项目运行时产物（绝对不要提交，含个人信息）
+*.log
+chaoxing.log
+settings.json
+web.db
+cookies.txt
+cache.json
+.chaoxing/
+
+# 构建产物
+build/
+dist/
+*.spec.bak
+.piptmp/
+.pipcache/
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

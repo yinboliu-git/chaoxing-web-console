@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>chaoxing · 学习通控制台</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+  <link rel="icon" type="image/png" href="/static/img/icon.png">
+  <link rel="apple-touch-icon" href="/static/img/icon.png">
+</head>
+<body>
+<div id="app" class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <img class="brand-mark" src="/static/img/icon.png" alt="chaoxing">
+      <div class="brand-text">
+        <strong>chaoxing</strong>
+        <span>学习通控制台</span>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <a class="nav-item" data-route="courses" href="#/courses">
+        <svg viewBox="0 0 24 24"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5A2.5 2.5 0 0 0 4 20.5z"/><path d="M4 20.5V5.5"/></svg>
+        <span>课程选择</span>
+      </a>
+      <a class="nav-item" data-route="run" href="#/run">
+        <svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 8-8"/><path d="M12 8v4l3 2"/><path d="M4 4v5h5"/></svg>
+        <span>运行进度</span>
+      </a>
+      <a class="nav-item" data-route="tiku" href="#/tiku">
+        <svg viewBox="0 0 24 24"><path d="M4 6.5A2.5 2.5 0 0 1 6.5 4H19v13H6.5A2.5 2.5 0 0 0 4 19.5z"/><path d="M8 8h7M8 12h5"/></svg>
+        <span>题库配置</span>
+      </a>
+      <a class="nav-item" data-route="ai" href="#/ai">
+        <svg viewBox="0 0 24 24"><path d="M12 3l1.9 5.1L19 10l-5.1 1.9L12 17l-1.9-5.1L5 10l5.1-1.9z"/><path d="M18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9z"/></svg>
+        <span>AI 答题</span>
+      </a>
+      <a class="nav-item" data-route="settings" href="#/settings">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 15a1.7 1.7 0 0 0 .33 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.33 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.09A1.7 1.7 0 0 0 8.9 19.3a1.7 1.7 0 0 0-1.87.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.7 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.7 8.9a1.7 1.7 0 0 0-.33-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.7a1.7 1.7 0 0 0 1.03-1.56V3a2 2 0 1 1 4 0v.09A1.7 1.7 0 0 0 15 4.7a1.7 1.7 0 0 0 1.87-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.3 9v.09A1.7 1.7 0 0 0 20.86 10H21a2 2 0 1 1 0 4h-.09A1.7 1.7 0 0 0 19.4 15z"/></svg>
+        <span>设置与历史</span>
+      </a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <div class="user-chip" id="user-chip">
+        <span class="avatar" id="avatar">?</span>
+        <div class="user-meta">
+          <strong id="user-name">未登录</strong>
+          <span id="user-state">点击登录</span>
+        </div>
+        <button class="icon-btn" id="theme-toggle" title="切换主题" type="button">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M5 5l1.5 1.5M17.5 17.5L19 19M19 5l-1.5 1.5M6.5 17.5L5 19"/></svg>
+        </button>
+      </div>
+      <p class="version">v{{ version }} · 仅本机</p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section id="view" class="view"></section>
+  </main>
+</div>
+
+<div id="toasts" class="toasts"></div>
+<script type="module" src="/static/js/app.js"></script>
+</body>
+</html>
